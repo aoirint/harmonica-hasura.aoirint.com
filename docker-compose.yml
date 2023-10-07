@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
 
   graphql-engine:
-    image: hasura/graphql-engine:v2.33.4
+    image: hasura/graphql-engine:v2.34.0
     ports:
       - "${HASURA_PORT}:8080"
     depends_on:
