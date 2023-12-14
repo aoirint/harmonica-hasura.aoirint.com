@@ -1,5 +1,7 @@
 # harmonica-hasura.aoirint.com
 
+[aoirint/harmonica-hasura](https://github.com/aoirint/harmonica-hasura)の個人用インスタンス。
+
 ```shell
 npm install -g hasura-cli
 
