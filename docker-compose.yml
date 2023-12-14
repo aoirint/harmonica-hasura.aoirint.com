@@ -10,11 +10,12 @@ services:
 
   graphql-engine:
     image: hasura/graphql-engine:v2.36.0
+    user: hasura
+    restart: always
     ports:
       - "${HASURA_PORT}:8080"
     depends_on:
       - "postgres"
-    restart: always
     environment:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:password@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: ${HASURA_GRAPHQL_ENABLE_CONSOLE}
