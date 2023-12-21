@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   postgres:
-    image: postgres:14
+    image: postgres:15
     restart: always
     volumes:
       - ${HOST_DATA_DIR:?}:/var/lib/postgresql/data
