@@ -30,6 +30,12 @@ log_format json  escape=json '{'
 '}';
 
 
+# HTTP/1.1 Upgrade for WebSocket
+map $http_upgrade $connection_upgrade {
+	default upgrade;
+	''      close;
+}
+
 ##
 # Server Settings
 ##
