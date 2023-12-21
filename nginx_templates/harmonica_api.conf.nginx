@@ -38,6 +38,9 @@ server {
 	server_name _;
 	listen 80 default_server;
 
+	access_log /var/log/nginx/access.log json;
+	error_log /var/log/nginx/error.log;
+
 	access_log /logs/access.log combined;
 	access_log /logs/access_main.log main;
 	access_log /logs/access_json.log json;
@@ -49,6 +52,7 @@ server {
 
 	location / {
 		proxy_pass http://graphql-engine:8080;
+
 		proxy_redirect                          off;
 		proxy_set_header Host                   $host;
 		proxy_set_header X-Real-IP              $remote_addr;
