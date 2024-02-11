@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: password
 
   graphql-engine:
-    image: hasura/graphql-engine:v2.36.2
+    image: hasura/graphql-engine:v2.37.0
     user: hasura
     restart: always
     depends_on:
