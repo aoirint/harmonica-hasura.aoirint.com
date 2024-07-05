@@ -13,7 +13,7 @@ services:
         fluentd-async: "true"
 
   graphql-engine:
-    image: hasura/graphql-engine:v2.39.2
+    image: hasura/graphql-engine:v2.40.2
     user: hasura
     restart: always
     depends_on:
